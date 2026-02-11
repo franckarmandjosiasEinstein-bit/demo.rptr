@@ -1,14 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <title>
             Première page
         </title>
         <meta charset="utf-8">
         <meta name="description" content="Ceci est une page de démonstration pour l'exercice HTML.">
+        <meta name="author" content="Franck Armand">
     </head>
     <body>
         <p> Salut. </p>
         <p> Comment ça va ? </p>
+        <h1>
+            <strong>
+                Contextualisation : De la Simulation au Système Embarqué (ESP32)
+            </strong>
+        </h1>
+            <h2>
+                Pourquoi l’ESP32 et l’importance de la simulation ?
+            </h2>
+                <p>
+                    Le choix de <strong>modéliser</strong> une chaîne de transmission basée sur <strong>l’architecture de l’ESP32</strong>
+                    n’est pas anodin. Ce microcontrôleur est aujourd’hui un standard industriel pour <strong>l’Internet
+                    des Objets (IoT)</strong> grâce à son rapport performance/prix et sa connectivité native (WiFi/Bluetooth).<br>
+                    Pour un <strong>ingénieur en systèmes embarqués</strong>, la simulation sous MATLAB-Simulink
+                    constitue une étape cruciale de dimensionnement avant l’implémentation physique<br>
+                    Elle permet de :<br>
+                    <ul>
+                        <li> 
+                            <em><strong>Valider l’architecture logicielle</strong></em> : Vérifier si les algorithmes (comme le codage
+                            de Hamming) fonctionnent mathématiquement avant de les coder en C-C++.<br>
+                        </li>
+                        <li> 
+                            <em><strong>Visualiser l’invisible</strong></em> : Observer les constellations 16-QAM et l’impact du bruit
+                            (AWGN), ce qui est impossible sur un circuit réel sans équipements coûteux.<br>
+                        </li>       
+                        <li>
+                            <em><strong>Anticiper les contraintes temporelles</strong></em> : Comprendre l’impact de la taille des
+                            buffers sur la latence du signal audio.<br>
+                        </li>
+                    </ul>
+                </p>
+            <h2>
+                 Analogie : Du Modèle Simulink au Matériel Réel
+            </h2>
+                <p>
+                    Cette simulation reprend fidèlement les étapes de traitement du signal telles qu’elles
+                    seraient exécutées par le hardware et le software de l’ESP32. Le tableau suivant détaille
+                    cette correspondance 
+                </p>
+            <h2>
+                Justification du Dimensionnement (Buffer vs MTU)
+            </h2>
+                <p>
+                    Une question pertinente concerne <strong>le choix de la taille des données transmises</strong>. Dans un
+                    réseau Wi-Fi réel, les trames peuvent atteindre une taille <em>(MTU) d’environ 1500 octets
+                    (soit 12 000 bits)</em>. Cependant, dans notre simulation, nous avons opté pour des buffers
+                    plus courts <strong>(1024 échantillons)</strong> et un traitement par <strong>petits paquets (11 à 15 bits pour le
+                    Hamming)</strong>.<br>
+                    Ce choix est justifié par deux contraintes d’ingénierie :<br>
+                    <ol>
+                        <li>
+                            <em><strong>Contrainte de Latence (Temps Réel)</strong></em> : Dans une application de transmission
+                            audio (type VoIP ou Streaming), attendre d’avoir rempli un tampon de 12 000 bits
+                            créerait un retard perceptible à l’écoute. Un buffer de 1024 échantillons à 44 100
+                            Hz correspond à une latence d’environ 23 ms, ce qui est idéal pour du temps réel.
+                        </li>
+                    <br>
+                        <li>
+                            <em><strong>Granularité de la Correction d’Erreur</strong></em> : Le code de Hamming (15, 11) fonctionne sur des mots binaires courts. Simuler des blocs gigantesques ne changerait
+                            pas la physique de la correction d’erreur mais alourdirait inutilement le temps de
+                            calcul de la simulation sans apporter de précision supplémentaire sur la robustesse
+                            du signal.
+                        </li>
+                   </ol> 
+                </p>
     </body>
 </html>
