@@ -308,3 +308,101 @@ _.contact_nav_table1{
     top: 5%;
     right: inherit;
 }
+
+.sala_toma{
+    background-image: url("../images/salade_de_tomates.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: color;
+    width: 100vw;
+    height: 100vh;  
+    position: sticky;
+    z-index: 1;
+}
+
+.sala_tom_desc{
+    font-family: 'Edwardian Script ITC', cursive;
+    font-size: 40px;
+    margin: 10px;
+    padding: 0 10px 10px 10px;
+    background-color: lightcyan;
+    color: black;
+    text-align: center;
+}
+
+.Description{
+    font-family: 'Times New Roman', serif;
+    text-align: justify;
+    font-size: 20px;
+    margin: 0px;
+    padding: 20px;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 10px;
+}
+
+.sala_toma_table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightgoldenrodyellow;
+    color: black;
+    border-radius: 10px;
+}
+
+.sala_toma_table th{
+    border: 1px solid blueviolet;
+    padding: 10px;
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    color: lightgreen;
+}
+
+.sala_toma_table td{
+    border: 1px solid blueviolet;
+    padding: 10px;
+    text-align: center;
+}
+
+.sala_toma_table :hover{
+    background-color: lightcyan;
+    color: black;
+    cursor: pointer;
+}
+
+.sala_toma_table h3{
+    font-family: 'Cambria', serif;
+    font-size: 25px;
+    background-color: lightcyan;
+    color: lightseagreen;
+    font-style: italic;
+    font: 700;
+}
+
+.Sala_toma_links{
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+    background-color: lightcyan;
+    color: blueviolet;
+}
+.Sala_toma_links :hover{
+    color: lightcyan;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+.sala_prix{
+    font-family: 'Cambria', serif;
+    font-size: 25px;
+    background-color: lightcyan;
+    color: lightseagreen;
+    font-style: italic;
+    font: 700;
+    text-align: center;
+}
+
+
