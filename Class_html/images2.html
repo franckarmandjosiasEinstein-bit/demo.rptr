@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Wendbenedo Franck Armand Josias BONKOUNGOU">
+    <title>Les formats d'images pour le Web</title>
+</head>
+<body>
+    <h1>Comparaison des formats d'images</h1>
+    <p>Pour les temps de chargement, les valeurs sont des <em> <strong>théoriques pour une image haute définition de 2 Mo (base JPEG) chargée avec une connexion mobile moyenne (3G+/4G à 5 Mbps)</em></strong>.</p>
+    <p>Voici une image de chaque format insérée dans la page :</p>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Format : </th>
+                <th>JPEG / JPG</th>
+                <th>PNG-24</th>
+                <th>GIF</th>
+                <th>SVG</th>
+                <th>WebP</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Images</td>
+            <td><img src="imgs/Robot.jpeg" alt="Exemple JPEG" width="300"></td>
+            <td><img src="imgs/Robot.png" alt="Exemple PNG" width="300"></td>
+            <td><img src="imgs/Robot.gif" alt="Exemple GIF" width="300"></td>
+            <td><img src="imgs/Robot.svg" alt="Exemple SVG" width="300"></td>
+            <td><img src="imgs/Robot.webp" alt="Exemple WebP" width="300"></td>
+        </tr>
+        <tr>
+            <td>Poids Estimé</td>
+            <td>~450 Ko</td>
+            <td>600 Ko</td>
+            <td>1.8 Mo</td>
+            <td>15 Ko</td>
+            <td>15 Mo</td>
+        </tr>
+        <tr>
+            <td>Temps de chargement</td>
+            <td><b>0.7s</b></td>
+            <td><b>1.0s</b></td>
+            <td><b>2.9s</b></td>
+            <td><b>0.05s</b></td>
+            <td><b>24.0s</b></td>
+        </tr>
+        <tr>
+            <td>Usage principal</td>
+            <td>Photos standards</td>
+            <td>Logos (transparence)</td>
+            <td>Logos (transparence)</td>
+            <td>Icônes et tracés</td>
+            <td>Performance Web / SEO</td>
+        </tr>
+        </tbody>
+    </table> 
+    <h2>Réponse à la question</h2>
+    <p>On utilisera le format png parce que le format JPEG ne supporte pas la transparence (il utilise un fond opaque), tandis que le PNG permet une couche alpha pour la transparence, ce qui est essentiel pour un logo devant se fondre sur différents arrière-plans.</p>
+</body>
+</html>

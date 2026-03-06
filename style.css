@@ -137,7 +137,7 @@ Menu.CSS
 */
 .Menu_body {
     background: linear-gradient(to bottom, #0004, #0002, #0006, #0008),
-                center / cover url('img/Menu_3.jpg') fixed;
+                center / cover url('img/Menu_3.webp') fixed;
 }
 .Menu_header {
     background: linear-gradient(to bottom, #0004, #0002, #0006, #0008) fixed;
@@ -240,4 +240,13 @@ Menu.CSS
 .menu_table_body tr td a:hover {
     color: #fff3;
     background-color: #333;
+}
+
+.menu_table tfoot {
+    color: whitesmoke;
+}
+
+.image_menu_table{
+    color: aliceblue;
+    width: 100%;
 }

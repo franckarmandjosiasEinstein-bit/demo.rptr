@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etape 2 : Organisation sémantique avec thead, tbody, tfoot</title>
+    <meta name="Author" content="Wendbenedo Franck Armand Josias BONKOUNGOU">
+</head>
+<body>
+    <h1>Structurer le tableau en sections sémantiques.</h1>
+    <table border="2">
+        <caption><h2>Annual Income</h2></caption>
+        <thead>
+        <tr>
+            <!--<th> (Table Header): Represents a header cell. It is used to label a row or a column, describing the type of data contained in the cells below or to the right of it-->
+            <th>Months</th>
+            <th> Quantity sold </th>
+            <th>Income (DH)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!--<td> (Table Data): Represents a standard data cell. It contains the actual information or data points of the table.-->
+            <td>January</td>
+        <td>1,500</td>
+        <td>50,000</td>
+        </tr>
+        <tr>
+            <td>February</td>
+        <td>1,200</td>
+        <td>48,000</td>
+        </tr>
+        <tr>
+            <td>March</td>
+        <td>1,800</td>
+        <td>64,000</td>
+        </tr>
+        <tr>
+            <td>April</td>
+            <td>1,600</td>
+            <td>56,000</td>
+        </tr>
+        <tr>
+            <td>May</td>
+            <td>1,400</td>
+            <td>52,000</td>
+        </tr>
+        <tr>
+            <td>June</td>
+            <td>1,900</td>
+            <td>67,000</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>1,700</td>
+            <td>61,000</td>
+        </tr>
+        <tr>
+            <td>August</td>
+            <td>1,300</td>
+            <td>49,000</td>
+        </tr>
+        <tr>
+            <td>September</td>
+            <td>1,100</td>
+            <td>45,000</td>
+        </tr>
+        <tr>
+            <td>October</td>
+            <td>1,000</td>
+            <td>40,000</td>
+        </tr>
+        <tr>
+            <td>November</td>
+            <td>900</td>
+            <td>36,000</td>
+        </tr>
+        <tr>
+            <td>December</td>
+            <td>800</td>
+            <td>32,000</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <!--The tfoot is used for Semantic clarity! It clearly defines the purpose of the content. A footer row with a total sum is not part of the data; it’s a summary.-->
+        <tr>
+            <th>Annual Income</th>
+            <th>16,200</th>
+            <th>600,000</th>
+        </tr>
+        <!--Even placed before the tbody the browser will always put it in the bottom-->
+    </tfoot>
+    </table>
+</html>
+</body>
+</html>
