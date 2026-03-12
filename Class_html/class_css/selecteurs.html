@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélecteurs CSS - id et classes</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #1F3864;
+            text-align: center;
+            border-bottom: 2px solid #2E74B5;
+            padding-bottom: 15px;
+        }
+        
+        #titre-principal {
+            background-color: #1F3864;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .mise-en-evidence {
+            background-color: #FFFFCC;
+            border-left: 4px solid #2E74B5;
+            padding: 8px 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+        
+        p {
+            line-height: 1.6em;
+        }
+        
+        .explications {
+            background-color: #E8F4F8;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: #2E74B5;
+            color: white;
+            font-weight: bold;
+        }
+        
+        table tr:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Les Sélecteurs CSS : id et classes</h1>
+    
+    <p id="titre-principal">Paragraphe avec un id unique.</p>
+    <p class="mise-en-evidence">Premier paragraphe stylisé avec la classe mise-en-evidence.</p>
+    <p class="mise-en-evidence">Deuxième paragraphe stylisé avec la même classe.</p>
+    <p>Paragraphe sans style particulier.</p>
+    
+    <div class="explications">
+        <h3>Différences entre les sélecteurs :</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sélecteur</th>
+                    <th>Symbole</th>
+                    <th>Usage</th>
+                    <th>Occurrences</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>#</td>
+                    <td>Cibler un élément unique</td>
+                    <td>Une seule fois par page</td>
+                </tr>
+                <tr>
+                    <td>class</td>
+                    <td>.</td>
+                    <td>Cibler plusieurs éléments</td>
+                    <td>Autant de fois que voulu</td>
+                </tr>
+                <tr>
+                    <td>Élément simple</td>
+                    <td>(aucun)</td>
+                    <td>Cibler tous les éléments du type</td>
+                    <td>Tous les éléments correspondants</td>
+                </tr>
+                <tr>
+                    <td>Contextuel</td>
+                    <td>(espace)</td>
+                    <td>Cibler un élément dans un contexte</td>
+                    <td>Selon la position dans le DOM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="explications">
+        <h3>Points clés à retenir :</h3>
+        <p><strong>✓ Les ids (#)</strong> doivent être uniques dans une page et s'utilisent pour identifier un élément particulier.</p>
+        <p><strong>✓ Les classes (.)​ </strong> peuvent être utilisées autant de fois qu'on le souhaite et permettent de grouper des élément avec le même style.</p>
+        <p><strong>✓ La spécificité :</strong> Un sélecteur id a une spécificité plus élevée qu'une classe, qui a elle-même une spécificité plus élevée qu'un sélecteur d'élément.</p>
+    </div>
+    
+</body>
+</html>

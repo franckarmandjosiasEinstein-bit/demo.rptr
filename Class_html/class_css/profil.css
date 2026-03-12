@@ -1,0 +1,145 @@
+body {
+    background: #fdfdfd; /* fond clair */
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Segoe UI", Arial, sans-serif; /* première famille */
+    font-size: 1rem;
+    background-position: center top;
+    background-attachment: local fixed;
+    background-size: 100% 100% cover;
+    margin: 0;
+    color: #000;
+    text-shadow: 0 0 3px #fff;
+}
+
+/* liens stylisés */
+a:link { color: #0066cc; text-decoration: none; }
+a:visited { color: #663399; }
+a:hover { color: #cc0000; text-decoration: underline; }
+a:active { color: #ff6600; }
+
+
+
+/* new styles for profile page */
+#main-header {
+    text-align: center;
+    margin-bottom: 0px;
+    font-family: 'Georgia', serif; /* seconde famille */
+    position: fixed;
+}
+#main-header .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #1F3864;
+}
+#main-header .subtitle {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* pseudo-élément dans une section */
+#personal-info p:first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1F3864;
+}
+
+
+.info-section {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.personal-list {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-list li {
+    margin: 5px 0;
+}
+
+#modules-table {
+    width: 90%; /* utilisation de pourcentage */
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#modules-table th,
+#modules-table td {
+    border: 1px solid #ccc; /* px pour bordure */
+    padding: 0.5em;
+    text-align: left;
+    vertical-align: top;
+}
+
+#modules-table thead th {
+    background-color: lightskyblue;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+#modules-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#modules-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.info-section {
+    width: 90%;
+    margin: 20px auto;
+}
+.info-section h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #1F3864;
+}
+
+.personal-list {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-list li {
+    margin: 5px 0;
+}
+
+.info-section {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.info-section h2 {
+    margin-top: 70px;
+    margin-bottom: 10px;
+    color: #1F3864;
+    background-color: #E8F4F8;
+    padding: 15px;
+    border-left: 4px solid #2E74B5;
+    border-radius: 5px;
+}
+
+.info-section ul{
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.info-section ul li{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-size: large;
+    border: #cc0000;
+    color: #333;
+    background-color: #E8F4F8;
+    padding: 10px;
+    border-left: 4px solid #2E74B5;
+    border-radius: 5px;
+    margin: 5px 0;
+}

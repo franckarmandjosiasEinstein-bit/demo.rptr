@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couleurs et Arrière-plans CSS</title>
+    <link rel="stylesheet" type="text/css" href="style_bg.css">
+</head>
+<body>
+    
+    <h1>Couleurs et Arrière-plans en CSS</h1>
+    
+    <h2>Propriétés de fond disponibles :</h2>
+    
+    <div class="propriete">
+        <h3>1. background-color</h3>
+        <p>Définit la couleur de fond d'un élément. Les valeurs peuvent être exprimées en code hexadécimal (#hex), RGB, ou noms de couleurs.</p>
+        <p><strong>Exemple :</strong> background-color: #FFCC66;</p>
+    </div>
+    
+    <div class="propriete">
+        <h3>2. background-image</h3>
+        <p>Ajoute une image de fond à un élément. L'image peut se répéter ou rester unique selon les autres propriétés.</p>
+        <p><strong>Exemple :</strong> background-image: url('butterfly.gif');</p>
+    </div>
+    
+    <div class="propriete">
+        <h3>3. background-repeat</h3>
+        <p>Contrôle la répétition de l'image de fond.</p>
+        <table>
+            <tr>
+                <th>Valeur</th>
+                <th>Comportement</th>
+            </tr>
+            <tr>
+                <td>repeat</td>
+                <td>Répète l'image horizontalement et verticalement (défaut)</td>
+            </tr>
+            <tr>
+                <td>no-repeat</td>
+                <td>L'image n'est affichée qu'une seule fois</td>
+            </tr>
+            <tr>
+                <td>repeat-x</td>
+                <td>Répète l'image horizontalement uniquement</td>
+            </tr>
+            <tr>
+                <td>repeat-y</td>
+                <td>Répète l'image verticalement uniquement</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="propriete">
+        <h3>4. background-attachment</h3>
+        <p>Détermine si l'image reste fixe ou se déplace avec le contenu.</p>
+        <ul>
+            <li><strong>scroll</strong> : L'image se déplace avec le contenu (défaut)</li>
+            <li><strong>fixed</strong> : L'image reste fixe par rapport à la fenêtre</li>
+        </ul>
+    </div>
+    
+    <div class="propriete">
+        <h3>5. background-position</h3>
+        <p>Positionne l'image de fond. Les valeurs peuvent être des mots-clés (top, left, center, right, bottom) ou des coordonnées (pixels, pourcentages).</p>
+        <p><strong>Exemples :</strong></p>
+        <ul>
+            <li>background-position: top left;</li>
+            <li>background-position: center;</li>
+            <li>background-position: 50% 50%;</li>
+            <li>background-position: 100px 200px;</li>
+        </ul>
+    </div>
+    
+    <div class="propriete">
+        <h3>Propriété raccourcie : background</h3>
+        <p>Vous pouvez combiner toutes les propriétés background en une seule ligne :</p>
+        <p style="font-family: monospace; background-color: #f0f0f0; padding: 10px;">background: #FFCC66 url('butterfly.gif') no-repeat fixed right bottom;</p>
+        <p><strong>Ordre :</strong> couleur | image | répétition | attachement | position</p>
+    </div>
+    
+    <h2>Propriétés de couleur de texte :</h2>
+    
+    <div class="propriete">
+        <h3>Propriété color</h3>
+        <p>Définit la couleur du texte. S'applique à tous les éléments de texte.</p>
+        <p><strong>Exemple :</strong> color: #990000;</p>
+    </div>
+    
+    <h2>Résumé des propriétés background</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Propriété</th>
+                <th>Valeurs possibles</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>background-color</td>
+                <td>couleur (#hex, rgb, nom)</td>
+                <td>Couleur de fond de l'élément</td>
+            </tr>
+            <tr>
+                <td>background-image</td>
+                <td>url('fichier.gif')</td>
+                <td>Image de fond</td>
+            </tr>
+            <tr>
+                <td>background-repeat</td>
+                <td>repeat / no-repeat / repeat-x / repeat-y</td>
+                <td>Répétition de l'image</td>
+            </tr>
+            <tr>
+                <td>background-attachment</td>
+                <td>scroll / fixed</td>
+                <td>Défilement ou fixe</td>
+            </tr>
+            <tr>
+                <td>background-position</td>
+                <td>top left / center / 50% 50% / 100px 200px</td>
+                <td>Position de l'image</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

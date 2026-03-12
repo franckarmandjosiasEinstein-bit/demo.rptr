@@ -1,0 +1,73 @@
+/* Feuille de style pour arriere_plan.html */
+
+body {
+    background-color: #FFCC66;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,100,100,0.1)"/></svg>');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+    /* Équivalence en propriété raccourcie : */
+    /* background: #FFCC66 url('butterfly.gif') no-repeat fixed right bottom; */
+    
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #990000;
+    background-color: #FC9804;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 32px;
+}
+
+h2 {
+    color: #333;
+    background-color: rgba(252, 152, 4, 0.2);
+    padding: 10px 15px;
+    border-left: 4px solid #FC9804;
+    margin-top: 30px;
+}
+
+p {
+    line-height: 1.8;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.propriete {
+    background-color: #E8F4F8;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #2E74B5;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #FC9804;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f0f0f0;
+}

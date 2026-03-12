@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylisation des tableaux HTML</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #1F3864;
+            text-align: center;
+            border-bottom: 2px solid #2E74B5;
+            padding-bottom: 15px;
+            font-size: 32px;
+        }
+        
+        h2 {
+            color: #2E74B5;
+            margin-top: 30px;
+            font-size: 22px;
+        }
+        
+        h3 {
+            color: #333;
+            background-color: #E8F4F8;
+            padding: 10px;
+            border-left: 4px solid #2E74B5;
+        }
+        
+        p {
+            line-height: 1.8em;
+            text-align: justify;
+        }
+        
+        /* Style CSS pour les tableaux */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        caption {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+        }
+        
+        th {
+            background-color: #2E74B5;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        td, th {
+            border: 1px solid #CCCCCC;
+            padding: 8px;
+        }
+        
+        tbody tr:hover {
+            background-color: #F0F0F0;
+            transition: background-color 0.3s ease;
+        }
+        
+        tfoot {
+            background-color: #E2EFDA;
+            font-weight: bold;
+        }
+        
+        tfoot td {
+            padding: 10px 8px;
+            border-top: 2px solid #2E74B5;
+        }
+        
+        .demo-box {
+            background-color: #FFFFCC;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #FFB81C;
+            border-radius: 3px;
+        }
+        
+        .note {
+            background-color: #E8F4F8;
+            padding: 10px 15px;
+            border-left: 4px solid #2E74B5;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+        
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Stylisation des tableaux HTML avec CSS</h1>
+    
+    <h2>Exemple 1 : Tableau de résultats d'étudiants</h2>
+    
+    <table>
+        <caption>Résultats des étudiants - Semestre 8</caption>
+        <thead>
+            <tr>
+                <th>N° Apogée</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>16000093</td>
+                <td>BENALI</td>
+                <td>Ahmed</td>
+                <td>15.5</td>
+            </tr>
+            <tr>
+                <td>16006600</td>
+                <td>LAHLOU</td>
+                <td>Fatima</td>
+                <td>17.0</td>
+            </tr>
+            <tr>
+                <td>16009871</td>
+                <td>OUHABI</td>
+                <td>Youssef</td>
+                <td>13.5</td>
+            </tr>
+            <tr>
+                <td>16003452</td>
+                <td>TRAN</td>
+                <td>An</td>
+                <td>16.0</td>
+            </tr>
+            <tr>
+                <td>16004567</td>
+                <td>SILVA</td>
+                <td>Maria</td>
+                <td>14.5</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Moyenne de la classe</td>
+                <td>15.3</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <h2>Propriétés CSS essentielles pour les tableaux</h2>
+    
+    <h3>border-collapse</h3>
+    <div class="note">
+        <p><code>table { border-collapse: collapse; }</code></p>
+        <p>☑ La propriété <strong>border-collapse: collapse</strong> supprime l'espace entre les bordures des cellules adjacentes pour un rendu plus propre.</p>
+    </div>
+    
+    <h3>caption</h3>
+    <p>La balise <code>&lt;caption&gt;</code> définit un titre ou une description pour le tableau :</p>
+    <div class="demo-box">
+        <code>caption { font-style: italic; color: #555; margin-bottom: 8px; }</code>
+    </div>
+    
+    <h3>thead, tbody, tfoot</h3>
+    <p>Ces balises structurent le tableau en trois sections :</p>
+    <ul>
+        <li><code>&lt;thead&gt;</code> : L'en-tête du tableau (une seule ligne généralement)</li>
+        <li><code>&lt;tbody&gt;</code> : Le corps du tableau (contient les données)</li>
+        <li><code>&lt;tfoot&gt;</code> : Le pied du tableau (résumés, totaux, moyennes)</li>
+    </ul>
+    
+    <h3>Styles pour les sections du tableau</h3>
+    <div class="demo-box">
+        <p><code>th { background-color: #2E74B5; color: white; padding: 10px; }</code></p>
+        <p><code>tbody tr:hover { background-color: #F0F0F0; }</code></p>
+        <p><code>tfoot { background-color: #E2EFDA; font-weight: bold; }</code></p>
+    </div>
+    
+    <h2>Exemple 2 : Tableau d'emploi du temps</h2>
+    
+    <table>
+        <caption>Emploi du temps - Semaine 12</caption>
+        <thead>
+            <tr>
+                <th>Horaire</th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>08h00-10h00</strong></td>
+                <td>Mathématiques</td>
+                <td>Français</td>
+                <td>Mathématiques</td>
+                <td>Français</td>
+                <td>Informatique</td>
+            </tr>
+            <tr>
+                <td><strong>10h15-12h15</strong></td>
+                <td>Français</td>
+                <td>Mathématiques</td>
+                <td>Informatique</td>
+                <td>Mathématiques</td>
+                <td>Français</td>
+            </tr>
+            <tr>
+                <td><strong>13h30-15h30</strong></td>
+                <td>Informatique</td>
+                <td>Informatique</td>
+                <td>Français</td>
+                <td>Informatique</td>
+                <td>Mathématiques</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Total : 15 heures de cours par semaine</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <h2>Bonnes pratiques pour styliser les tableaux</h2>
+    
+    <div class="note">
+        <h3>✓ Recommandations</h3>
+        <ul>
+            <li>Utilisez <code>border-collapse: collapse</code> pour un rendu net</li>
+            <li>Distinguez visuellement l'en-tête avec une couleur et une police différente</li>
+            <li>Appliquez <code>:hover</code> aux lignes du corps pour améliorer la lisibilité</li>
+            <li>Utilisez une couleur différente pour le pied du tableau si nécessaire</li>
+            <li>Assurez-vous que le contraste couleur/texte est suffisant</li>
+            <li>Ajoutez du padding pour aérer visuellement les cellules</li>
+            <li>Alignez les nombres à droite pour une meilleure compréhension</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

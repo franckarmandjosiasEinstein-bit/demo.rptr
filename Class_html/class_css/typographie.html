@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typographie CSS</title>
+    <style type="text/css">
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Propriétés de police */
+        h1 { 
+            font-family: Arial, Verdana, sans-serif; 
+            font-size: 30px;
+            text-align: center; 
+            letter-spacing: 4px;
+            color: #1F3864;
+            border-bottom: 2px solid #2E74B5;
+            padding-bottom: 15px;
+        }
+        
+        h2 { 
+            font-family: 'Times New Roman', serif; 
+            font-style: italic;
+            color: #2E74B5;
+            margin-top: 30px;
+        }
+        
+        p { 
+            font-size: 14px; 
+            font-weight: normal; 
+            line-height: 1.8em;
+            text-align: justify;
+            text-indent: 30px;
+        }
+        
+        .titre-gras { 
+            font-weight: bold; 
+            font-variant: small-caps;
+            color: #1F3864;
+        }
+        
+        /* Propriété raccourcie font */
+        .exemple-raccourci {
+            font: italic bold 14px/1.8em Arial, sans-serif;
+            background-color: #E8F4F8;
+            padding: 10px 15px;
+            border-left: 4px solid #2E74B5;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+        
+        /* Propriétés de texte */
+        .souligne { 
+            text-decoration: underline;
+        }
+        
+        .barre { 
+            text-decoration: line-through;
+        }
+        
+        .majuscules { 
+            text-transform: uppercase;
+            color: red;
+            font-weight: bold;
+        }
+        
+        .minuscules { 
+            text-transform: lowercase;
+            color: blue;
+            font-weight: bold;
+        }
+        
+        .demo-box {
+            background-color: #FFFFCC;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #FFB81C;
+            border-radius: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin: 20px 0;
+        }
+        
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: #2E74B5;
+            color: white;
+            font-weight: bold;
+        }
+        
+        table tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Typographie en CSS</h1>
+    
+    <h2>1. Propriétés de police (<span class="majuscules">font-*</span>)</h2>
+    
+    <div class="demo-box">
+        <p>La gestion de la typographie est essentielle pour une bonne présentation visuelle. CSS offre plusieurs propriétés pour contrôler les polices.</p>
+    </div>
+    
+    <h3 class="titre-gras">font-family : Sélection de la police</h3>
+    <p>Vous pouvez spécifier une liste de polices. Le navigateur utilisera la première disponible.</p>
+    <p><code>font-family: Arial, Verdana, sans-serif;</code></p>
+    
+    <h3 class="titre-gras">font-size : Taille de la police</h3>
+    <p>Contrôle la taille du texte en diverses unités : px, pt, em, rem, %</p>
+    <p><code>font-size: 30px;</code> ou <code>font-size: 1.5em;</code></p>
+    
+    <h3 class="titre-gras">font-style : Style de police</h3>
+    <p style="font-style: italic;">Valeurs : normal | italic | oblique</p>
+    
+    <h3 class="titre-gras">font-weight : Épaisseur de la police</h3>
+    <p style="font-weight: bold;">Valeurs : 100, 200... 900 | normal | bold</p>
+    
+    <h3 class="titre-gras">font-variant : Variante de police</h3>
+    <p style="font-variant: small-caps;">Valeurs : normal | small-caps</p>
+    
+    <h3 class="titre-gras">line-height : Hauteur de ligne</h3>
+    <p style="line-height: 2em;">Une ligne haute améliore la lisibilité (ligne-height: 2em;)</p>
+    
+    <div class="demo-box">
+        <h3>Propriété raccourcie font</h3>
+        <p class="exemple-raccourci">Cette ligne utilise la propriété raccourcie font qui combine style, weight, size/line-height et famille</p>
+        <p><code>p { font: italic bold 14px/1.8em Arial, sans-serif; }</code></p>
+        <p><strong>Ordre :</strong> style | variant | weight | size/line-height | family</p>
+    </div>
+    
+    <h2>2. Propriétés de texte (<span class="majuscules">text-*</span>)</h2>
+    
+    <h3 class="titre-gras">text-align : Alignement du texte</h3>
+    <p style="text-align: center;">Valeurs : left | right | center | justify</p>
+    
+    <h3 class="titre-gras">text-indent : Retrait de première ligne</h3>
+    <p style="text-indent: 50px;">Ce paragraphe a un retrait de 50px à la première ligne.</p>
+    
+    <h3 class="titre-gras">text-decoration : Décoration du texte</h3>
+    <p class="souligne">Ce texte est souligné (text-decoration: underline;)</p>
+    <p class="barre">Ce texte a une ligne au travers (text-decoration: line-through;)</p>
+    
+    <h3 class="titre-gras">text-transform : Transformation du texte</h3>
+    <p>Original : <span class="majuscules">ceci devient majuscules</span></p>
+    <p>Original : <span class="minuscules">CECI DEVIENT MINUSCULES</span></p>
+    
+    <h3 class="titre-gras">letter-spacing : Espacement des lettres</h3>
+    <p style="letter-spacing: 3px;">Ce texte a des lettres espacées de 3px</p>
+    
+    <h3 class="titre-gras">word-spacing : Espacement des mots</h3>
+    <p style="word-spacing: 10px;">Ce texte a des mots espacés de 10px</p>
+    
+    <h2>Résumé des propriétés de police</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Propriété</th>
+                <th>Valeurs</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>font-family</td>
+                <td>Arial, Verdana, sans-serif</td>
+                <td>Police à utiliser</td>
+            </tr>
+            <tr>
+                <td>font-size</td>
+                <td>30px, 1.5em, 14pt</td>
+                <td>Taille de la police</td>
+            </tr>
+            <tr>
+                <td>font-style</td>
+                <td>normal, italic, oblique</td>
+                <td>Style de la police</td>
+            </tr>
+            <tr>
+                <td>font-weight</td>
+                <td>normal, bold, 100-900</td>
+                <td>Épaisseur de la police</td>
+            </tr>
+            <tr>
+                <td>line-height</td>
+                <td>1.5, 1.8em, 20px</td>
+                <td>Espacement vertical des lignes</td>
+            </tr>
+            <tr>
+                <td>text-align</td>
+                <td>left, center, right, justify</td>
+                <td>Alignement du texte</td>
+            </tr>
+            <tr>
+                <td>text-decoration</td>
+                <td>underline, line-through, overline</td>
+                <td>Décoration du texte</td>
+            </tr>
+            <tr>
+                <td>text-transform</td>
+                <td>uppercase, lowercase, capitalize</td>
+                <td>Transformation du texte</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

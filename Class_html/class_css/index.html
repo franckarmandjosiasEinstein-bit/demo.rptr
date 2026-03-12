@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma première page stylisée</title>
+    <link rel="stylesheet" type="text/css" href="monstyle.css">
+</head>
+<body>
+    <h1>Ma Première Page Stylisée</h1>
+    
+    <div class="intro">
+        <p>Bienvenue sur cette page qui démontre l'utilisation d'une <span class="highlight">feuille de style CSS externe</span>. Cette méthode est la plus recommandée pour les projets professionnel.</p>
+    </div>
+    
+    <h2>Avantages d'une feuille externe :</h2>
+    <p>L'utilisation d'une feuille de style externe présente plusieurs bénéfices majeurs :</p>
+    <ul>
+        <li><strong>Cohérence</strong> : Les styles s'appliquent automatiquement à toutes les pages liées</li>
+        <li><strong>Maintenance facile</strong> : Modifier un style met à jour toutes les pages d'un coup</li>
+        <li><strong>Séparation</strong> : Séparation complète du fond (CSS) et de la forme (HTML)</li>
+        <li><strong>Performance</strong> : Le fichier CSS est mis en cache par le navigateur</li>
+        <li><strong>Réutilisabilité</strong> : Un même CSS peut servir plusieurs projets</li>
+    </ul>
+    
+    <h2>Structure recommandée :</h2>
+    <p>Pour lier un fichier CSS externe à votre page HTML, utilisez la balise &lt;link&gt; : </p>
+    <p><code style="background-color: #f0f0f0; padding: 5px; display: inline-block;">&lt;link rel="stylesheet" type="text/css" href="monstyle.css"&gt;</code></p>
+    
+    <h2>Exemple de contenu</h2>
+    <p>Vous pouvez ajouter autant de contenu que vous voulez, et tous les styles du fichier monstyle.css s'appliqueront automatiquement à cette page et à toutes les autres pages qui utilisent ce fichier CSS.</p>
+    
+    <footer>
+        <p>&copy; 2026 - Exercice CSS - Formation HTML+CSS+JavaScript</p>
+    </footer>
+    
+</body>
+</html>

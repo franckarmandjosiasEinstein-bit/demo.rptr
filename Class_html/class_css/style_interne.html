@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Interne - CSS</title>
+    <style type="text/css">
+        body { 
+            background-color: #FFFFCC; 
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 { 
+            color: #1F3864; 
+            text-align: center;
+            font-size: 32px;
+            border-bottom: 2px solid #2E74B5;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #2E74B5;
+            margin-top: 30px;
+        }
+        p { 
+            color: #336699; 
+            font-size: 14px; 
+            line-height: 1.6em;
+            text-align: justify;
+        }
+        a { 
+            color: #990000; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover { 
+            text-decoration: underline;
+            color: #CC0000;
+        }
+        .info {
+            background-color: #E8F4F8;
+            padding: 10px 15px;
+            border-left: 4px solid #2E74B5;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Styles Internes avec la Balise &lt;style&gt;</h1>
+    
+    <p>Cette page démontre l'utilisation d'une feuille de style interne. Tous les styles sont définis dans la balise &lt;style&gt; du &lt;head&gt;, ce qui permet d'appliquer les mêmes règles à tous les éléments corresponding de la page.</p>
+    
+    <h2>Avantages de cette méthode :</h2>
+    <div class="info">
+        <p>✓ L'indication de style dans &lt;style&gt; porte sur <strong>tous les éléments correspondants</strong> de la page, contrairement à la méthode inline.</p>
+        <p>✓ Les styles sont centralisés dans le &lt;head&gt;</p>
+        <p>✓ Plus facile à maintenir qu'inline</p>
+    </div>
+    
+    <h2>Inconvénients :</h2>
+    <div class="info">
+        <p>✗ Les styles ne sont pas partagés entre plusieurs pages</p>
+        <p>✗ Augmente la taille du fichier HTML</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unités de mesure CSS</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+        }
+        
+        h1 {
+            color: #1F3864;
+            text-align: center;
+            border-bottom: 2px solid #2E74B5;
+            padding-bottom: 15px;
+            font-size: 30px;
+        }
+        
+        h2 {
+            color: #2E74B5;
+            margin-top: 30px;
+            font-size: 22px;
+        }
+        
+        h3 {
+            color: #333;
+            background-color: #E8F4F8;
+            padding: 10px;
+            border-left: 4px solid #2E74B5;
+            margin-top: 20px;
+        }
+        
+        p {
+            line-height: 1.8em;
+            text-align: justify;
+        }
+        
+        .demo-box {
+            background-color: #FFFFCC;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid #FFB81C;
+            border-radius: 5px;
+        }
+        
+        /* Unités absolues */
+        .pixels {
+            font-size: 30px;
+            background-color: #FFE8D6;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid red;
+        }
+        
+        .points {
+            font-size: 18pt;
+            background-color: #D6E8FF;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid blue;
+        }
+        
+        /* Unités relatives à la police */
+        .em-example {
+            font-size: 1.5em;
+            background-color: #E8FFD6;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid green;
+        }
+        
+        .rem-example {
+            font-size: 2rem;
+            background-color: #FFD6E8;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid purple;
+        }
+        
+        /* Unités relatives au viewport */
+        .plein-ecran {
+            width: 100vw;
+            height: 50vh;
+            background: linear-gradient(135deg, #FFFFCC 0%, #FFE8D6 100%);
+            border: 2px solid #FC9804;
+            margin: 20px -20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        /* Pourcentage */
+        .moitie {
+            width: 50%;
+            background-color: #E8F4F8;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #2E74B5;
+        }
+        
+        .tiers {
+            width: 33.33%;
+            background-color: #D6E8FF;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #2E74B5;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin: 20px 0;
+        }
+        
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: #2E74B5;
+            color: white;
+            font-weight: bold;
+        }
+        
+        table tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        code {
+            background-color: #f0f0f0;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        .note {
+            background-color: #FFFFCC;
+            padding: 10px 15px;
+            border-left: 4px solid #FF6B00;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Unités de mesure en CSS</h1>
+    
+    <h2>1. Unités absolues</h2>
+    
+    <h3>Pixels (px)</h3>
+    <div class="pixels">
+        Cette police fait 30px - Unité semi-absolue basée sur les pixels de l'écran
+    </div>
+    <p>Les pixels sont l'unité la plus couramment utilisée pour les bordures et les espacements précis.</p>
+    <p><code>h1 { font-size: 30px; }</code></p>
+    
+    <h3>Points (pt)</h3>
+    <div class="points">
+        Cette police fait 18pt - Utilisée principalement pour l'impression
+    </div>
+    <p>Les points (1/72 pouce) sont historiquement utilisés pour les documents imprimés.</p>
+    <p><code>h2 { font-size: 18pt; }</code></p>
+    
+    <h2>2. Unités relatives à la police</h2>
+    
+    <h3>Em (em)</h3>
+    <div class="em-example">
+        Cette police fait 1.5em (1.5 × 16px = 24px)
+    </div>
+    <p>L'unité <code>em</code> est relative à la taille de la police du parent. Si le parent a 16px, 1.5em = 24px.</p>
+    <p><code>p { font-size: 1.5em; } /* 1.5 × taille du parent */</code></p>
+    
+    <h3>Rem (rem - Root Em)</h3>
+    <div class="rem-example">
+        Cette police fait 2rem (2 × 16px du html = 32px)
+    </div>
+    <p>L'unité <code>rem</code> est relative à la taille de la police de la racine (&lt;html&gt;), pas du parent direct. Elle offre plus de prévisibilité.</p>
+    <p><code>p { font-size: 2rem; } /* 2 × 16px racine */</code></p>
+    
+    <div class="note">
+        <strong>💡 Avantage du rem :</strong> Tous les éléments avec <code>rem</code> changent proportionnellement si vous modifiez la taille de base du html.
+    </div>
+    
+    <h2>3. Unités relatives au viewport</h2>
+    
+    <h3>Viewport Width (vw) et Viewport Height (vh)</h3>
+    <div class="plein-ecran">
+        Cet élément fait 100vw × 50vh (100% largeur × 50% hauteur de l'écran)
+    </div>
+    <p>Ces unités sont parfaites pour les mises en page full-screen. 1vw = 1% de la largeur de l'écran, 1vh = 1% de la hauteur.</p>
+    <p><code>.plein-ecran { width: 100vw; height: 50vh; }</code></p>
+    
+    <h2>4. Pourcentage (%)</h2>
+    
+    <h3>Largeur 50%</h3>
+    <div class="moitie">
+        Cette div occupe 50% de son conteneur parent
+    </div>
+    
+    <h3>Largeur 33.33%</h3>
+    <div class="tiers">
+        Cette div occupe 1/3 (33.33%) de son conteneur parent
+    </div>
+    
+    <p>Les pourcentages sont relatifs à la valeur du parent. Parfaits pour les mises en page fluides et responsives.</p>
+    <p><code>.moitie { width: 50%; }</code></p>
+    
+    <h2>Résumé des unités CSS</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Unité</th>
+                <th>Type</th>
+                <th>Calcul</th>
+                <th>Usage recommandé</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>px</code></td>
+                <td>Semi-absolue</td>
+                <td>1 pixel écran</td>
+                <td>Bordures, espacements précis</td>
+            </tr>
+            <tr>
+                <td><code>pt</code></td>
+                <td>Absolue</td>
+                <td>1/72 pouce</td>
+                <td>Impression, documents papier</td>
+            </tr>
+            <tr>
+                <td><code>em</code></td>
+                <td>Relative police</td>
+                <td>× taille du parent</td>
+                <td>Marges, padding, tailles fluides</td>
+            </tr>
+            <tr>
+                <td><code>rem</code></td>
+                <td>Relative racine</td>
+                <td>× taille de &lt;html&gt;</td>
+                <td>Tailles de police cohérentes</td>
+            </tr>
+            <tr>
+                <td><code>vw / vh</code></td>
+                <td>Relative viewport</td>
+                <td>1% largeur / hauteur écran</td>
+                <td>Mises en page full-screen</td>
+            </tr>
+            <tr>
+                <td><code>%</code></td>
+                <td>Relative parent</td>
+                <td>% de la valeur du parent</td>
+                <td>Largeurs fluides, responsive</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="note">
+        <strong>✓ Conseil :</strong> Pour une meilleure scalabilité, préférez <code>rem</code> pour les tailles de police et <code>%</code> ou <code>vw</code> pour les largeurs. Utilisez <code>px</code> pour les bordures et les détails mineurs.
+    </div>
+    
+</body>
+</html>

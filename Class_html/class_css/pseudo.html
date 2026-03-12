@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes et Pseudo-éléments</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        h1 {
+            color: #1F3864;
+            text-align: center;
+            border-bottom: 2px solid #2E74B5;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: #2E74B5;
+            margin-top: 30px;
+        }
+        
+        /* Pseudo-classes pour les liens */
+        a:link { 
+            color: blue; 
+            text-decoration: none;
+        }
+        
+        a:visited { 
+            color: purple; 
+            text-decoration: none;
+        }
+        
+        a:hover { 
+            color: red; 
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
+        a:active { 
+            color: orange;
+        }
+        
+        /* Pseudo-éléments typographiques */
+        p:first-letter { 
+            font-size: 200%; 
+            color: #1F3864; 
+            font-weight: bold;
+        }
+        
+        p:first-line { 
+            color: #2E74B5; 
+            font-style: italic;
+        }
+        
+        /* Sélecteur contextuel */
+        h1 em { 
+            color: red;
+            font-style: normal;
+        }
+        
+        /* Styles supplémentaires */
+        .demo-box {
+            background-color: #E8F4F8;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #2E74B5;
+            border-radius: 3px;
+        }
+        
+        .rappel {
+            background-color: #FFFFCC;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+            border-left: 4px solid #FF6B00;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Pseudo-classes et Pseudo-éléments en CSS</h1>
+    
+    <h2>Démonstration des pseudo-classes de liens</h2>
+    
+    <div class="demo-box">
+        <p>Voyez comment les styles changent selon l'état du lien :</p>
+        <ul>
+            <li><a href="https://www.example.com">Ceci est un lien (state: :link)</a></li>
+            <li><a href="style_interne.html">Lien visité (state: :visited)</a></li>
+            <li><a href="https://www.google.com">Survolez-moi pour voir :hover</a></li>
+            <li><a href="https://www.mozilla.org">Cliquez pour voir :active</a></li>
+        </ul>
+    </div>
+    
+    <h2>Démonstration des pseudo-éléments</h2>
+    
+    <div class="demo-box">
+        <h3>Premier paragraphe :</h3>
+        <p>Cette première ligne est en italique et bleue grâce à p:first-line. La première lettre est également augmentée et en gras. Vous pouvez voir les pseudo-éléments en action dans ce paragraphe de démonstration.</p>
+        
+        <h3>Deuxième paragraphe :</h3>
+        <p>Les pseudo-éléments permettent de styliser des parties spécifiques d'un élément sans pour autant ajouter de balises HTML supplémentaires. C'est très utile pour améliorer la typographie d'une page.</p>
+    </div>
+    
+    <h2>Utilisation d'un sélecteur contextuel</h2>
+    
+    <div class="demo-box">
+        <h1>Ce titre contient du texte <em>en rouge</em> grâce au sélecteur h1 em</h1>
+    </div>
+    
+    <div class="rappel">
+        <strong>⚠️ Rappel important :</strong> 
+        <p>La pseudo-classe <code style="background-color: white; padding: 2px 5px;">a:hover</code> <strong>DOIT</strong> être placée <strong>après</strong> les autres pseudo-classes (<code>a:link</code> et <code>a:visited</code>) dans la feuille de style pour fonctionner correctement. L'ordre est crucial !</p>
+    </div>
+    
+    <h2>Récapitulatif</h2>
+    
+    <div class="demo-box">
+        <h3>États des liens (Pseudo-classes) :</h3>
+        <ul>
+            <li><code>:link</code> - Lien non visité</li>
+            <li><code>:visited</code> - Lien déjà visité</li>
+            <li><code>:hover</code> - Au passage de la souris</li>
+            <li><code>:active</code> - Pendant le clic</li>
+        </ul>
+        
+        <h3>Pseudo-éléments typographiques :</h3>
+        <ul>
+            <li><code>:first-letter</code> - Première lettre d'un élément</li>
+            <li><code>:first-line</code> - Première ligne d'un élément</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

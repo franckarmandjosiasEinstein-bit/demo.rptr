@@ -1,0 +1,52 @@
+/* Feuille de style externe pour l'index.html */
+
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 { 
+    color: #1F3864; 
+    border-bottom: 2px solid #2E74B5;
+    padding-bottom: 10px;
+    font-size: 32px;
+}
+
+h2 {
+    color: #2E74B5;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+p { 
+    line-height: 1.8em; 
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.intro {
+    background-color: #E8F4F8;
+    padding: 15px;
+    border-left: 4px solid #2E74B5;
+    margin: 20px 0;
+}
+
+.highlight {
+    background-color: #FFFFCC;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Wendbenedo Franck Armand Josias BONKOUNGOU">
+    <link rel="stylesheet" href="profil.css" type="text/css">
+    <title>Profil Etudiant</title>
+</head>
+<body>
+    <header id="main-header">
+        <h1 class="title">Mon Profil Etudiant</h1>
+        <p class="subtitle">ENSAK - Génie Electrique option Systèmes Embarqués et IA - Semestre 8</p>
+    </header>
+    <section id="personal-info" class="info-section">
+        <h2>Informations Personnelles</h2>
+        <ul class="personal-list">
+            <li id="last-name">Nom : BONKOUNGOU</li>
+            <li id="first-names">Prénoms : Wendbenedo Franck Armand Josias</li>
+        </ul>
+        <!--Tableau des modules et compétences acquises-->
+        <table id="modules-table" class="data-table">
+            <thead>
+                <tr>
+                    <th>Module (UE)</th>
+                    <th>Compétences acquises / savoir-faire</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Semestre 7 -->
+                <tr>
+                    <td colspan="2"><strong>Semestre&nbsp;7 (Automne)</strong></td>
+                </tr>
+                <tr>
+                    <td>UE&nbsp;7‑1 : Soft Skills&nbsp;3</td>
+                    <td>Management de projet, communication professionnelle, anglais technique.</td>
+                </tr>
+                <tr>
+                    <td>UE&nbsp;7‑2 : Systèmes d'exploitation et Réseaux</td>
+                    <td>Architecture des OS, protocoles réseaux pour l'IoT (6LoWPAN, MQTT).</td>
+                </tr>
+                <tr>
+                    <td>UE&nbsp;7‑3 : Électronique Numérique</td>
+                    <td>Conception sur FPGA, VHDL, microcontrôleurs avancés.</td>
+                </tr>
+                <tr>
+                    <td>UE&nbsp;7‑4 : Traitement du Signal</td>
+                    <td>Analyse de données provenant des capteurs.</td>
+                </tr>
+                <!-- Semestre 8 -->
+                <tr>
+                    <td colspan="2"><strong>Semestre&nbsp;8 (Printemps)</strong></td>
+                </tr>
+                <tr>
+                    <td>UE&nbsp;8‑3 [IoT] : Sécurité des systèmes embarqués</td>
+                    <td>
+                        Cryptographie embarquée, attaques sur canaux auxiliaires, tests & maintenance (clean code, CI, tests unitaires), gestion de l'énergie, compatibilité électromagnétique.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Projet de fin d'année</td>
+                    <td>Projet long de conception d'un système complet (Industrie&nbsp;4.0 / Smart Cities).</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="skills-target" class="info-section">
+        <h2>Compétences visées ("Savoir-Faire")</h2>
+        <ul>
+            <li><strong>A. Conception de Systèmes Communicants (Hardware)</strong>
+                <ul>
+                    <li>Choix et programmation de microcontrôleurs (STM32, ESP32) ou FPGA.</li>
+                    <li>Maîtrise des protocoles sans fil : LoRa, Sigfox, Bluetooth Low Energy.</li>
+                    <li>Dimensionnement énergétique (frugalité) pour une autonomie de plusieurs
+                        années sur pile.</li>
+                </ul>
+            </li>
+            <li><strong>B. Expertise en Cybersécurité Embarquée</strong>
+                <ul>
+                    <li>Security by Design : intégrer la sécurité dès la phase de conception matérielle.</li>
+                    <li>Implémentation de bibliothèques cryptographiques sur plateformes contraintes.</li>
+                    <li>Analyse et contre‑mesures des attaques physiques (canaux auxiliaires, injection de
+                        fautes).</li>
+                </ul>
+            </li>
+            <li><strong>C. Développement Logiciel Robuste</strong>
+                <ul>
+                    <li>Maîtrise du C/C++ pour l'embarqué.</li>
+                    <li>Principes du Clean Code et du Test Driven Development (TDD).</li>
+                    <li>Mise en place de pipelines d'intégration continue (CI/CD).</li>
+                </ul>
+            </li>
+            <li><strong>D. Vision Industrielle (Soft Skills)</strong>
+                <ul>
+                    <li>Gestion de projets techniques complexes en équipe.</li>
+                    <li>Compréhension des enjeux de maintenance à distance (OTA).</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
