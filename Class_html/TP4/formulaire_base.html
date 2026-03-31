@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="BONKOUNGOU Wendbenedo Franck Armand Josias">
+    <title>Premier Formulaire</title>
+</head>
+<body>
+    <h1>Formulaire d'inscription</h1>
+    <!---Method GET: Données visibles dans l'URL-->
+    <form action="traitement.php" method="get">
+        nom:<input type="text" name="nom" id="1"><br><br>
+        prénom:<input type="text" name="prenom" id="3"><br><br>
+        adresse:<input type="text" name="adresse" id="4"><br><br>
+        ville:<input type="text" name="ville" id="5"><br><br>
+        code postal:<input type="text" name="cp" id="6"><br><br>
+        pays:<input type="text" name="pays" id="7"><br><br>
+        <input type="submit" value="Envoyer"><br><br>
+    </form>
+
+    <!--Method POST: Données non visibles dans l'URL
+    Données encapsulées dans une trame HTTP-->
+    <form action="traitement.php" method="post">
+        email:<input type="email" name="email"><br><br>
+        password:<input type="password" name="password"><br><br>
+        <input type="submit" value="Envoyer">"
+    </form>
+</body>
+</html>

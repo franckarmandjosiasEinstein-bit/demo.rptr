@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="BONKOUNGOU Wendbenedo Franck Armand Josias">
+    <title>Atribut Input</title>
+</head>
+
+<body>
+    <form method="post" action="#">
+        <!-- Texte libre -->
+        <p>Nom : <input type="text" name="nom" size="30" maxlength="50"></p>
+        <p>Prénom : <input type="text" name="prenom" placeholder="Votre
+            prénom"></p>
+        <!-- Mot de passe (caracteres masques) -->
+        <p>Mot de passe : <input type="password" name="mdp" size="20"></p>
+        <!-- Email, telephone, URL -->
+        <p>Email : <input type="email" name="email" placeholder="ex@mail.com"></p>
+        <p>Tel : <input type="tel" name="tel" placeholder="06XXXXXXXX"></p>
+        <p>Site web : <input type="url" name="site" placeholder="https://..."></p>
+        <!-- Nombre et plage -->
+        <p>Age : <input type="number" name="age" min="18" max="99"></p>
+        <!-- Boutons -->
+        <p>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Effacer">
+        </p>
+    </form>
+</body>
+
+</html>

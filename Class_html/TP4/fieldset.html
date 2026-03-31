@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="BONKOUNGOU Wendbenedo Franck Armand Josias">
+    <title>Structurer un formulaire avec fieldset</title>
+</head>
+
+<body>
+    <form method="post" action="#">
+        <!-- Groupe 1 : Informations personnelles -->
+        <fieldset>
+            <legend>Informations personnelles</legend>
+            <p>
+                <label for="nom">Nom :</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="nom" name="nom" required>
+            </p>
+            <p>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </p>
+            <p>
+                <label for="naissance">Date de naissance :</label>
+                <input type="date" id="naissance" name="naissance">
+            </p>
+        </fieldset>
+        <!-- Groupe 2 : Coordonnees -->
+        <fieldset>
+            <legend>Coordonnées</legend>
+            <p>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </p>
+            <p>
+                <label for="tel">Téléphone :</label>
+                <input type="tel" id="tel" name="tel"  pattern="[0]{1}[6-7]{1}[0-9]{8}" title="06xxxxxx">
+            </p>
+        </fieldset>
+        <!-- Groupe 3 : Compte -->
+
+        <fieldset>
+            <legend>Création de compte</legend>
+            <p>
+                <label for="mdp">Mot de passe :</label>
+                <input type="password" id="mdp" name="mdp" minlength="8" required>
+            </p>
+            <p>
+                <label for="mdp2">Confirmer :</label>
+                <input type="password" id="mdp2" name="mdp2" required>
+            </p>
+        </fieldset>
+        <p><input type="submit" value="Créer le compte"></p>
+    </form>
+</body>
+
+</html>

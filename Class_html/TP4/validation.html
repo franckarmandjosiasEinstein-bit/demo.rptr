@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="BONKOUNGOU Wendbenedo Franck Armand Josias">
+    <title>Control de Saisie</title>
+</head>
+
+<body>
+    <form method="post" action="#">
+        <!-- Champ obligatoire -->
+        <p>Nom* : <input type="text" name="nom" required placeholder="Obligatoire"></p>
+        <!-- Longueur min et max -->
+        <p>Pseudo (3 a 15 car.) :
+            <input type="text" name="pseudo" minlength="3" maxlength="15" required>
+        </p>
+        <!-- Email avec validation automatique -->
+        <p>Email* : <input type="email" name="email" required placeholder="ex@domaine.com"></p>
+        <!-- Expression reguliere (pattern) -->
+        <p>Code postal (5 chiffres) :
+            <input type="text" name="cp" pattern="[0-9]{5}" title="5 chiffres exactement" required>
+        </p>
+        <!-- Nombre avec plage -->
+        <p>Note (/20) : <input type="number" name="note" min="-1" max="20" step="0.5"></p>
+        <!-- URL automatiquement validee -->
+        <p>Site web : <input type="url" name="site" placeholder="https://exemple.com"></p>
+        <p><input type="submit" value="Valider"></p>
+    </form>
+</body>
+
+</html>

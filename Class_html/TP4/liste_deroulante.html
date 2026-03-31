@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="BONKOUNGOU Wendbenedo Franck Armand Josias">
+    <title>Input -select *size&gt;1</title>
+</head>
+
+<body>
+    <form action="#">
+        <!-- Liste simple (choix unique) -->
+        <p>Pays :
+            <select name="pays">
+                <option value="" disabled>-- Choisir un pays --</option>
+                <option value="ma" selected>Maroc</option>
+                <option value="fr">France</option>
+                <option value="dz">Algérie</option>
+                <option value="tn">Tunisie</option>
+                <option value="BFA">Burkina Faso</option>
+            </select>
+        </p>
+        <!-- Liste avec groupes (optgroup) -->
+        <p>Spécialité :
+            <select name="specialite">
+                <optgroup label="Informatique">
+                    <option value="gl">Génie Logiciel</option>
+                    <option value="ia">Intelligence Artificielle</option>
+                </optgroup>
+                <optgroup label="Electronique">
+                    <option value="seia">SEIA</option>
+                    <option value="eer">EER</option>
+                </optgroup>
+            </select>
+        </p>
+        <!-- Liste a choix multiples (Ctrl+clic pour selectionner plusieurs) -->
+        <p>Modules :
+            <select name="modules" multiple size="4">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="php">PHP</option>
+            </select>
+        </p>
+    </form>
+</body>
+
+</html>

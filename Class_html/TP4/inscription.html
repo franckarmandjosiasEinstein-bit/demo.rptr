@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="BONKOUNGOU Wendbenedo Franck Armand Josias">
+    <link rel="stylesheet" type="text/css" href="style_form.css">
+    <title>Inscription</title>
+</head>
+
+<body>
+    <h1>Inscription</h1>
+    <p class="information">Tous les champs marqués avec <span class="required">*</span> sont obligatoires.</p>
+    <form action="#" method="post">
+        <table>
+            <td>
+                <fieldset>
+                    <legend>Informations personnelles</legend>
+                    <p>
+                        <label for="nom"><span class="required">*</span> Nom :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="nom" name="nom" required title="Last-Name">
+                    </p>
+                    <p>
+                        <label for="prenom"><span class="required">*</span> Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required title="First-Name">
+                    </p>
+                    <P>
+                        <Label for="bith">Naissance :</Label>
+                        <input type="date" id="bith" name="bith" title="Date of Birth">
+                    </P>
+                    <p>
+                        <label for="sex1">Masculin</label>
+                        <input type="radio" name="sexe" id="sex1" value="Homme" checked required>
+                    </p>
+                    <p>
+                        <label for="sex2">Féminin</label>
+                        <input type="radio" name="sexe" id="sex2" value="Femme" required>
+                    </p>
+                </fieldset>
+            </td>
+            <td>
+                <fieldset>
+                    <legend>Coordonnées</legend>
+                    <p>
+                        <label for="school"><span class="required">*</span> Etablissement :</label>
+                        <input type="text" id="school" name="school" title="School" required minlength="3"
+                            maxlength="50">
+                    </p>
+                    <p>
+                        <label for="Estudiant_code"><span class="required">*</span> Code étudiant :</label>
+                        <input type="code" id="Estudiant_code" name="Estudiant_code" title="Student Code" required
+                            minlength="8" maxlength="8">
+                    </p>
+                    <p>
+                        <label for="email"><span class="required">*</span> Email :</label>
+                        <input type="email" id="email" name="email" required title="Email">
+                    </p>
+                    <p>
+                        <label for="tel">Telephone :</label>
+                        <input type="tel" id="tel" name="tel" pattern="[0]{1}[6-7]{1}[0-9]{8}" title="06XXXXXXXX">
+                    </p>
+                    <p>
+                        <label for="Attest_inscript">Attestation d'inscription :</label>
+                        <input type="file" id="Attest_inscript" name="Attest_inscript" accept=".pdf,.doc,.docx">
+                    </p>
+                </fieldset>
+            </td>
+            <td>
+                <fieldset>
+                    <legend>Création de compte</legend>
+                    <p>
+                        <select name="Filière" id="Filière">
+                            <optgroup label="IT">
+                                <option value="GI-GL">Génie Informatique - Génie Logiciel</option>
+                                <option value="GI-BD & DS">Génie Informatique - Base de Données et Data Science</option>
+                                <option value="GI-SEC">Génie Informatique - Sécurité Informatique</option>
+                                <option value="GI-IA">Génie Informatique - Intelligence Artificielle</option>
+                                <option value="GI-GLO">Génie Industriel - Génie Logistique</option>
+                                <option value="GI-M">Génie Industriel - Maintenance</option>
+                                <option value="GRST-ISU">Génie Réseau et Systèmes de Télécommunications - ISU</option>
+                                <option value="GRST-SEC">Génie Réseau et Systèmes de Télécommunications - Sécurité
+                                </option>
+                            </optgroup>
+                            <optgroup label="GE-GM-GB">
+                                <option value="GE-SEI">Génie Electrique - Systèmes Energétiques Intelligents</option>
+                                <option value="GE-SEIA">Génie Electrique - Systèmes Embarqués et Intelligent
+                                    Artificielle</option>
+                                <option value="GM">Génie Mécatronique</option>
+                                <option value="BIEE">Batiment Intelligent et Efficacité Energétique</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="INS_mail"><span class="required">*</span> Adresse Institutionnelle :</label>
+                        <input type="email" id="INS_mail" name="INS_mail" title="Institutional Email @uit.ac.ma"
+                            pattern="[a-zA-Z0-9].[a-zA-Z0-9]@uit.ac.ma" required>
+                    </p>
+                    <p>
+                        <label for="mdp"><span class="required">*</span> Mot de passe :</label>
+                        <input type="password" id="mdp" name="mdp" placeholder="Mot de passe compte étudiant"
+                            minlength="8" title="Password (8 characters minimum)" required>
+                    </p>
+                    <p>
+                        <label for="mdp2"><span class="required">*</span> Confirmer :</label>
+                        <input type="password" id="mdp2" name="mdp2" placeholder="Confirmer le mot de passe"
+                            minlength="8" title="Confirm Password" required>
+                    </p>
+                </fieldset>
+            </td>
+            <td>
+                <fieldset>
+                    <legend>Informations supplémentaires</legend>
+                    <p>
+                        <label for="lang">Langue Maitrisée :</label>
+                        <select id="lang" name="lang" title="Language" multiple size="2" required>
+                            <option value="fr">Français</option>
+                            <option value="en">Anglais</option>
+                            <option value="arb">Arabe</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="sport">Sport préféré :</label>
+                        <input type="text" id="sport" name="sport" placeholder="Entrez votre sport préféré...">
+                    </p>
+                    <p>
+                        <label for="hobby">Hobby :</label>
+                        <input type="text" id="hobby" name="hobby" placeholder="Entrez votre hobby...">
+                    </p>
+                    <p>
+                        <label for="info">Avez-vous des besoins spécifiques ?</label>
+                        <textarea id="info" name="info" rows="4" cols="50"
+                            placeholder="Décrivez vos besoins spécifiques ici..."></textarea>
+                    </p>
+                </fieldset>
+            </td>
+        </table>
+        <p><input type="submit" value="S'inscrire"></p>
+        <p><input type="reset" value="Effacer les champs"></p>
+    </form>
+</body>
+</html>

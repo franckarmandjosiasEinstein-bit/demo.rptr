@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="BONKOUNGOU Wendbenedo Franck Armand Josias">
+    <title>Types HTML5</title>
+</head>
+
+<body>
+    <form method="post" action="#">
+        <!-- Selecteur de date -->
+        <p>Date de naissance : <input type="datetime-local" name="naissance" min="1980-01-01" max="2010-12-31"></p>
+        <!-- Heure -->
+        <p>Heure du RDV : <input type="time" name="heure"></p>
+        <!-- Couleur -->
+        <p>Couleur favorite : <input type="color" name="couleur" value="#1F3864"></p>
+        <!-- Curseur (plage de valeurs) -->
+        <p>Niveau (1 a 10) : <input type="range" name="niveau" min="1" max="10" step="1"></p>
+        <!-- Recherche (avec bouton de suppression) -->
+        <p>Recherche : <input type="search" name="q" placeholder="Rechercher..."></p>
+        <!-- Envoi de fichier -->
+        <p>Photo : <input type="file" name="photo" accept="image/*"></p>
+        <!-- Champ cache (invisible pour l'utilisateur) -->
+        <input type="hidden" name="session_id" value="abc123">
+        <p><input type="submit" value="Envoyer"></p>
+    </form>
+</body>
+
+</html>
